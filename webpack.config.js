@@ -22,12 +22,13 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'src/index.html'
+            template: 'src/index.html',
+            inject: false
         })
     ],
     devServer: {
         overlay: true,
         open: true
     },
-    mode: process.env.NODE_ENV == 'production' ? 'production' : 'development'
+    mode: process.env.NODE_ENV === 'production ' ? 'production' : 'development'
 }
