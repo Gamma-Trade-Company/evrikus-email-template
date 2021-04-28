@@ -6,51 +6,46 @@
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-        <title><%=config.topic%></title>
-    </head>
-    <body leftmargin="0" topmargin="0" bgcolor="#F8F9FB">
-        <center>
-            <table width="100%"
-                   height="100%"
-                   cellpadding="0"
-                   cellspacing="0"
-                   border="0"
-                   bgcolor="white"
-                   style="max-width:600;
-                          border-right:1px solid #E7EAF6;
-                          border-left:1px solid #E7EAF6">
-                <tr>
-                    <%=_.template(require('./html/header.html').default)(config)%>
-                </tr>
 
-                <tr>
-                    <%=_.template(require('./html/banner.html').default)(config)%>
-                </tr>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title><%=config.topic%></title>
+</head>
 
-                <tr>
-                    <%=_.template(require('./html/prices.html').default)(config)%>
-                </tr>
+<body leftmargin="0" topmargin="0" bgcolor="#F8F9FB">
+    <center>
+        <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="white" style="max-width:600;border-right:1px solid #E7EAF6;border-left:1px solid #E7EAF6">
+            <tr>
+                <%=_.template(require('./html/header.html').default)(config)%>
+            </tr>
 
-                <tr>
-                    <%=_.template(require('./html/content.html').default)(config)%>
-                </tr>
-                
-                <tr>
-                    <%=_.template(require('./html/recomended.html').default)(config)%>
-                </tr>
+            <tr>
+                <%=_.template(require('./html/banner.html').default)(config)%>
+            </tr>
 
-                <tr>
-                    <%=_.template(require('./html/product.html').default)(config)%>
-                </tr>
+            <tr>
+                <%=_.template(require('./html/prices.html').default)(config)%>
+            </tr>
 
-                <tr>
-                    <%=_.template(require('./html/footer.html').default)(config)%>
-                </tr>
-            </table>
-        </center>
-    </body>
+            <tr>
+                <%=_.template(require('./html/content.html').default)(config)%>
+            </tr>
+
+            <tr>
+                <%=_.template(require('./html/recomended.html').default)(config)%>
+            </tr>
+
+            <tr>
+                <%=_.template(require('./html/product.html').default)(config)%>
+            </tr>
+
+            <tr>
+                <%=_.template(require('./html/footer.html').default)(config)%>
+            </tr>
+        </table>
+    </center>
+</body>
+
 </html>

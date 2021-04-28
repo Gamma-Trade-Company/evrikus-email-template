@@ -1,43 +1,25 @@
-
-<td
-    style="padding:50 40 40 40"
->
+<td style="padding:50 40 40 40">
     <%
         content.forEach(item => {
             if (item.type === 'p') { %>
-                    <p
-                        style="font-family:Arial,Helvetica,sans-serif;
-                            font-size:11pt;
-                            color:#3A3A3C;"
-                    >
-                        <%=item.html%>
-                    </p>
-            <% }
+    <p style="font-family:Arial,Helvetica,sans-serif;font-size:11pt;color:#3A3A3C;">
+        <%=item.html%>
+    </p>
+    <% }
 
             if (item.type === 'h') { %>
-                <p
-                    style="font-family:Arial,Helvetica,sans-serif;
-                           font-size:14pt;
-                           color:#3A3A3C;"
-                >
-                    <b>
-                        <%=item.html%>
-                    </b>
-                </p>
-            <% }
+    <p style="font-family:Arial,Helvetica,sans-serif;font-size:14pt;color:#3A3A3C;">
+        <b>
+            <%=item.html%>
+        </b>
+    </p>
+    <% }
 
             if (item.type === 'img') { %>
-                <center
-                    width="490"
-                >
-                    <img
-                        src="<%=item.src%>"
-                        alt="<%=item.alt%>"
-                        style="padding:40 0;
-                               max-width:100%;"
-                    >
-                </center>
-            <%
+    <center width="490">
+        <img src="<%=item.src%>" alt="<%=item.alt%>" style="padding:40 0;max-width:100%;">
+    </center>
+    <%
             }
         })
     %>
